@@ -24,7 +24,7 @@
     "@jsquash/png": "^3.0.1",
     "@jsquash/resize": "^2.1.0",
     "@jsquash/webp": "^1.4.0",
-    "@nuxthub/core": "^0.8.24",
+    "@nuxthub/core": "^0.9.0",
     "@paralleldrive/cuid2": "^2.2.2",
     "@pinia/nuxt": "^0.11.0",
     "@unocss/reset": "66.1.0-beta.10",
