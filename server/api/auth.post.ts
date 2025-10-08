@@ -16,7 +16,7 @@ export default eventHandler(async (event) => {
     throw createError({ statusCode: 429, statusMessage: 'Too Many Requests' })
 
   if (body.password === adminPassword) {
-    await setUserSession(event, {
+    await replaceUserSession(event, {
       user: { role: 'admin' },
     })
 

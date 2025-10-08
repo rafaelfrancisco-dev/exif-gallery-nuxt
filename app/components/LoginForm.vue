@@ -2,14 +2,18 @@
 const emit = defineEmits<{
   loggedIn: []
 }>()
+
 const { fetch: refreshSession } = useUserSession()
+
 const password = ref('')
 const loading = ref(false)
 
 async function login() {
   if (loading.value || !password.value)
     return
+
   loading.value = true
+
   await $fetch('/api/auth', {
     method: 'POST',
     body: { password: password.value },
@@ -23,6 +27,7 @@ async function login() {
         description: `${err.data?.message || err.message}. Please try again`,
       })
     })
+
   loading.value = false
 }
 </script>
